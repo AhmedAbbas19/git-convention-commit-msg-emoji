@@ -1,8 +1,9 @@
 # Git conventional commit message and emoji hook
 
-```
+
 _This is a fork from [Buzut/git-emojis-hook](https://github.com/Buzut/git-emojis-hook)_.
-```
+
+
 A simple git hook to provide strong guidelines for commit message with emojis.
 
 The commit message rules are the ones from Angular. I just augmented them by adding the corresponded emoji before the commit type. 
@@ -24,7 +25,7 @@ __Emojis are actual unicode emojis and not markdown emojis like `:fire:`. So it 
 Here are the types, their respective codes and the corresponding emojis:
 * __revert__: ⏳
 * __build__: 📦
-* __ci__: `: 🤖
+* __ci__: 🤖
 * __docs__: 📝
 * __feat__: ✨
 * __fix__: 🐛
@@ -37,9 +38,9 @@ Here are the types, their respective codes and the corresponding emojis:
 
 
 ## How to use
-For each project, add the file in the `.git/hooks` directory.
+For each project, add the `commit-msg` file in the `.git/hooks` directory.
 
-At the root of your git project, this one-liner can set up it all:
+At the root of your git project, run this command to make it executable:
 
 ```
 cd .git/hooks/ && chmod +x * || exit 0
@@ -81,8 +82,6 @@ fix(release): need to depend on latest rxjs and zone.js
 The version in our package.json gets copied to the one we publish, and users need the latest of these.
 ```
 
-### Revert
-If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
 
 ### Type
 Must be one of the following:
